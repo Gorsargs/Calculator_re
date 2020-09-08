@@ -4,8 +4,7 @@ def spliter(text):
         try:
             if len(text) > 0:
                 pattern_multiply = "((?<=\d)(?=\()|(?<=\))(?=[\d\√\(])|(?<=[\d\)])(?=\√))|(?<=\%)(?=[\(\d])"
-                #pattern_spacer = "(?=[\D])(?=[^\.])|(?<=[\+\-\*\\\%\√])|(?<=\()(?=\d)"
-                pattern_spacer = "(?=\D)(?=[^\.])|(?<=[^\(\+\\\*\-][\+\*\b\-\\\%])|(?<=[\√\^\*])|(?<=\()(?=\d)"
+                pattern_spacer = "(?=\D)(?=[^\.])|(?<=[^\(\+\*\-][\+\*\b\-\%])|(?<=[\√\^\*\/])|(?<=\()(?=\d)"
                 text = re.sub(pattern_multiply,"*",text) # adding * between )1, 1(, etc...
                 text = re.sub(pattern_spacer," ",text) # adding " " space between all characters if they are not numbers
                 text = text.split() # spliting text  to the list of splited characters

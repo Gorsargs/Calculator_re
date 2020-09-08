@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Calculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>calculator.ico</normaloff>calculator.ico</iconset>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
